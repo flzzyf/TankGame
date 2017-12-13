@@ -339,9 +339,9 @@ MonoBehaviour:
     rightWheel: {fileID: 1468995143}
     motor: 1
     steer: 0
-  maxMotorTorque: 300
+  maxMotorTorque: 500
   maxBrakeTorque: 100
-  maxSteerAngle: 40
+  maxSteerAngle: 30
 --- !u!1001 &1683387044
 Prefab:
   m_ObjectHideFlags: 0
