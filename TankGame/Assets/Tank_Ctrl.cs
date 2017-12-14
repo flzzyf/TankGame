@@ -15,6 +15,8 @@ public class Tank_Ctrl : MonoBehaviour {
     float steer = 0;
     public float maxSteerAngle = 40;
 
+    public GameObject tracks;
+
     private void Update()
     {
         float h = Input.GetAxis("Horizontal");
