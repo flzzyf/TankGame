@@ -3,7 +3,7 @@ guid: 9f8ff89320a2df2499316a13f2f7d8c9
 timeCreated: 1449379715
 licenseType: Store
 ModelImporter:
-  serializedVersion: 19
+  serializedVersion: 21
   fileIDToRecycleName:
     100000: //RootNode
     100002: SD_Tiger-I_Barrel
@@ -157,6 +157,29 @@ ModelImporter:
     4300054: SD_Tiger-I_StaticWheels_R
     4300056: SD_Tiger-I_TrackBelt_L
     4300058: SD_Tiger-I_TrackBelt_R
+    6400000: SD_Tiger-I_Barrel
+    6400002: SD_Tiger-I_Barrel_Collider
+    6400004: SD_Tiger-I_Body
+    6400006: SD_Tiger-I_Body_Collider_Lower
+    6400008: SD_Tiger-I_Body_Collider_Upper
+    6400010: SD_Tiger-I_Cannon
+    6400012: SD_Tiger-I_Cannon_Collider
+    6400014: SD_Tiger-I_Idler_Arm_L
+    6400016: SD_Tiger-I_Idler_Arm_R
+    6400018: SD_Tiger-I_IdlerWheel
+    6400020: SD_Tiger-I_RoadWheel_In
+    6400022: SD_Tiger-I_RoadWheel_Out
+    6400024: SD_Tiger-I_SprocketWheel
+    6400026: SD_Tiger-I_StaticWheels_L
+    6400028: SD_Tiger-I_StaticWheels_R
+    6400030: SD_Tiger-I_Sus_L
+    6400032: SD_Tiger-I_Sus_R
+    6400034: SD_Tiger-I_TrackBelt_L
+    6400036: SD_Tiger-I_TrackBelt_R
+    6400038: SD_Tiger-I_TrackPiece_L_Sp0300
+    6400040: SD_Tiger-I_TrackPiece_R_Sp0300
+    6400042: SD_Tiger-I_Turret
+    6400044: SD_Tiger-I_Turret_Collider
   materials:
     importMaterials: 1
     materialName: 0
@@ -164,9 +187,11 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -177,6 +202,7 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -184,7 +210,10 @@ ModelImporter:
     globalScale: 100
     meshCompression: 0
     addColliders: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -200,9 +229,11 @@ ModelImporter:
     normalSmoothAngle: 0
     normalImportMode: 0
     tangentImportMode: 3
-  importAnimation: 1
+    normalCalculationMode: 0
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -213,7 +244,10 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
   humanoidOversampling: 1

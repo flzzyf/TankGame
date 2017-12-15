@@ -5,7 +5,7 @@ using UnityEngine;
 public class Tank_Ctrl : MonoBehaviour {
 
     public List<AxleInfo> axleInfos;
-
+    //动力、刹车、转向
     float motor = 0;
     public float maxMotorTorque = 100;
 
@@ -15,7 +15,7 @@ public class Tank_Ctrl : MonoBehaviour {
     float steer = 0;
     public float maxSteerAngle = 40;
 
-    public GameObject tracks;
+    public Transform tracks;
 
     private void Update()
     {
@@ -23,7 +23,6 @@ public class Tank_Ctrl : MonoBehaviour {
         float v = Input.GetAxis("Vertical");
 
         motor = v * maxMotorTorque;
-
         steer = h * maxSteerAngle;
 
         foreach (var item in axleInfos)
@@ -39,6 +38,16 @@ public class Tank_Ctrl : MonoBehaviour {
                 item.rightWheel.motorTorque = motor;
             }
         }
+
+        foreach (Transform item in tracks)
+        {
+            MeshRenderer mr = item.gameObject.GetComponent<MeshRenderer>();
+
+            Material mtl = mr.material;
+
+            mtl.mainTextureOffset = new Vector3(-1 * v * Time.time, 0, 0);
+        }
+
 
     }
 
