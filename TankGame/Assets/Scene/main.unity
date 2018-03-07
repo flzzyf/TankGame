@@ -178,12 +178,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!4 &1088532604 stripped
+--- !u!4 &790968477 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 4484372793480564, guid: 1eb43633c1f0f3749bf4776714b2002a,
+  m_PrefabParentObject: {fileID: 4424186924351098, guid: 1eb43633c1f0f3749bf4776714b2002a,
     type: 2}
-  m_PrefabInternal: {fileID: 1105738662}
---- !u!1001 &1105738662
+  m_PrefabInternal: {fileID: 901368075}
+--- !u!1001 &901368075
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -221,6 +221,10 @@ Prefab:
     - target: {fileID: 4484372793480564, guid: 1eb43633c1f0f3749bf4776714b2002a, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622221735848464, guid: 1eb43633c1f0f3749bf4776714b2002a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4.44
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1eb43633c1f0f3749bf4776714b2002a, type: 2}
@@ -311,6 +315,24 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0245c80522c985846bddc6185cc6e93e, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1311545471 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1224803150688532, guid: 1eb43633c1f0f3749bf4776714b2002a,
+    type: 2}
+  m_PrefabInternal: {fileID: 901368075}
+--- !u!114 &1311545472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1311545471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be8e3ce83a434e749851c258a496f48b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turret: {fileID: 790968477}
+  rotSpeed: 1
 --- !u!1001 &1588796154
 Prefab:
   m_ObjectHideFlags: 0
@@ -358,9 +380,18 @@ Prefab:
       propertyPath: m_Name
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3681543e5b0f59742b73073cb379cdc6, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3681543e5b0f59742b73073cb379cdc6, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1713224737 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4622221735848464, guid: 1eb43633c1f0f3749bf4776714b2002a,
+    type: 2}
+  m_PrefabInternal: {fileID: 901368075}
 --- !u!1 &2137579225
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,7 +501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 10
   cameraDistanceLimit: {x: 2, y: 6}
-  target: {fileID: 1088532604}
+  target: {fileID: 1713224737}
   mouseSensitivity: 3
   yMinMax: {x: -85, y: 85}
   rotationSmoothTime: 0.1
