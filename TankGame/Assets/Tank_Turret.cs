@@ -10,10 +10,6 @@ public class Tank_Turret : MonoBehaviour {
 
     Transform target;
     Vector3 targetPoint;
-
-	void Start () {
-		
-	}
 	
 	void FixedUpdate ()
     {
