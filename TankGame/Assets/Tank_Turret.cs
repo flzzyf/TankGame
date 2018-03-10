@@ -22,7 +22,7 @@ public class Tank_Turret : MonoBehaviour {
             target = hit.transform;
             targetPoint = hit.point;
 
-            Debug.Log(hit.transform.gameObject.name);
+            //Debug.Log(hit.transform.gameObject.name);
 
         }
         else

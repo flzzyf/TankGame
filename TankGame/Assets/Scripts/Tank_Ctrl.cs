@@ -19,11 +19,11 @@ public class Tank_Ctrl : MonoBehaviour {
 
     private void Update()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        float inputH = Input.GetAxis("Horizontal");
+        float inputV = Input.GetAxis("Vertical");
 
-        motor = v * maxMotorTorque;
-        steer = h * maxSteerAngle;
+        motor = inputV * maxMotorTorque;
+        steer = inputH * maxSteerAngle;
 
         foreach (var item in axleInfos)
         {
@@ -37,15 +37,30 @@ public class Tank_Ctrl : MonoBehaviour {
                 item.leftWheel.motorTorque = motor;
                 item.rightWheel.motorTorque = motor;
             }
+
+            if ((item.leftWheel.rpm > 6 && motor < 0) || (item.leftWheel.rpm < -6 && motor > 0) || motor == 0)
+            {
+                //Debug.Log("刹车");
+                brakeTorque = maxBrakeTorque;
+                item.leftWheel.brakeTorque = brakeTorque;
+                item.rightWheel.brakeTorque = brakeTorque;
+            }
+            else
+            {
+                item.leftWheel.brakeTorque = 0;
+                item.rightWheel.brakeTorque = 0;
+
+            }
         }
 
+        //履带旋转
         foreach (Transform item in tracks)
         {
             MeshRenderer mr = item.gameObject.GetComponent<MeshRenderer>();
 
             Material mtl = mr.material;
 
-            mtl.mainTextureOffset = new Vector3(-1 * v * Time.time, 0, 0);
+            mtl.mainTextureOffset = new Vector3(-1 * inputV * Time.time, 0, 0);
         }
 
 
